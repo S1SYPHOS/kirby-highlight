@@ -4,6 +4,7 @@
 This plugin highlights your code snippets server-side - without external dependencies.
 
 - Highlighting code for everyone - no javascript needed
+- Extensive: currently 141 [supported languages](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages)
 - Customisable: 65 different styles included (more coming soon)
 
 ![screenshot of the kirby-highlight plugin](screenshot.gif)
@@ -45,7 +46,7 @@ Change `kirby-highlight` options to suit your needs:
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `plugin.kirby-highlight.languages` | Array | `['html', 'php']` | Defines languages to be auto-detected (currently over [135 languages](https://highlightjs.org/static/demo/) are supported). |
+| `plugin.kirby-highlight.languages` | Array | `['html', 'php']` | Defines languages to be auto-detected (currently [141 languages](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages) are supported). |
 
 ## Styling
 To apply one of the many available stylesheets, just include it in your `<head>` element using the `css()` helper:
