@@ -1,0 +1,38 @@
+[
+    {
+        "name": "scrivo/highlight.php",
+        "version": "v9.0.0",
+        "version_normalized": "9.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/scrivo/highlight.php.git",
+            "reference": "a905bf346a47f5fa40f33641b346c37f418d1242"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/a905bf346a47f5fa40f33641b346c37f418d1242",
+            "reference": "a905bf346a47f5fa40f33641b346c37f418d1242",
+            "shasum": ""
+        },
+        "time": "2016-01-01T14:08:00+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Highlight\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "description": "Server side syntax highlighter that supports over 90 languages. It's a PHP port of highlight.js",
+        "keywords": [
+            "code",
+            "highlight",
+            "highlight.js",
+            "highlight.php",
+            "syntax"
+        ]
+    }
+]
