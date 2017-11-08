@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Kirby Highlight - Server-side syntax highlighting for Kirby
+ * Kirby Highlight - Themeable server-side syntax highlighting for Kirby
  *
  * @package   Kirby CMS
  * @author    S1SYPHOS <hello@twobrain.io>
