@@ -37,6 +37,8 @@ Activate the plugin with the following line in your `config.php`:
 c::set('plugin.kirby-highlight', true);
 ``` 
 
+Now proper classes are added to your code snippets, making  them 'themeable'. In order to do so, head over to the [styling](#styling) section. If you want to activate `kirby-highlight` only on specific domains, read about [multi-environment setups](https://getkirby.com/docs/developer-guide/configuration/options).
+
 ## Configuration
 Change `kirby-highlight` options to suit your needs:
 
