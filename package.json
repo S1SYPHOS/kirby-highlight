@@ -1,8 +1,8 @@
 {
   "name": "kirby-highlight",
-  "description": "Kirby Syntax Highlight Plugin",
+  "description": "Themeable server-side syntax highlighting for Kirby",
   "author": "S1SYPHOS <hello@twobrain.io>",
-  "version": "0.2.0-beta",
+  "version": "0.3.0-beta",
   "type": "kirby-plugin",
   "license": "MIT"
 }
