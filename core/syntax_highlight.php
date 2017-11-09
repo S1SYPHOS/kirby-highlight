@@ -17,9 +17,11 @@ kirbytext::$post[] = function($kirbytext, $value) {
     $highlighter = new Highlighter();
     $highlighter->setAutodetectLanguages(c::get('plugin.kirby-highlight.languages') ? c::get('plugin.kirby-highlight.languages') : array('html', 'php'));
 
-    // Decoding each match, highlighting & outputting it
-    $decodedMatch = htmlspecialchars_decode($match[0]); 
-    $highlightedMatch = $highlighter->highlightAuto($decodedMatch);
+    // Optionally escaping each match ..
+    $input = c::get('plugin.kirby-highlight.escaping') ? $match[0] : htmlspecialchars_decode($match[0]);
+    
+    // .. but always highlighting & outputting it
+    $highlightedMatch = $highlighter->highlightAuto($input);
     $highlightedMatch = $highlightedMatch->value;
 
     return $highlightedMatch;
