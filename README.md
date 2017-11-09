@@ -47,7 +47,7 @@ Change `kirby-highlight` options to suit your needs:
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
 | `plugin.kirby-highlight.languages` | Array | `['html', 'php']` | Defines languages to be auto-detected (currently [141 languages](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages) are supported). |
-| `plugin.kirby-highlight.languages` | Boolean | `false` | Enables character escaping (eg, converts `<` (less than) to `&lt;`, `>` (greater than) to `&gt;`, see `htmlspecialchars` [docs](http://php.net/manual/en/function.htmlspecialchars.php). |
+| `plugin.kirby-highlight.escaping` | Boolean | `false` | Enables character escaping (converting `<` to `&lt;`, `>` to `&gt;`, ..), see `htmlspecialchars()` [docs](http://php.net/manual/en/function.htmlspecialchars.php). |
 
 ## Styling
 Since `kirby-highlight` outputs the same markup like `highlight.js`, all styles created for the latter are suitable as well. To apply one of the many available stylesheets, just include it in your `<head>` element using the `css()` helper:
