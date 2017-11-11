@@ -6,6 +6,34 @@ use kirbytext;
 use Highlight\Highlighter;
 use c;
 
+class Settings {
+
+  /**
+   * Returns the default options for `kirby-pep`
+   *
+   * @return array
+   */
+
+  public static function __callStatic($name, $args) {
+
+    // Set prefix
+    $prefix = 'plugin.kirby-highlight.';
+
+    // Set config names and fallbacks as settings
+    $settings = [
+
+      // Languages to be auto-detected
+      'languages' => ['html', 'php'],
+      'escaping'  => false,
+    ];
+
+    // If config settings exist, return the config with fallback
+    if(isset($settings) && array_key_exists($name, $settings)) {
+      return c::get($prefix . $name, $settings[$name]);
+    }
+  }
+}
+
 kirbytext::$post[] = function($kirbytext, $value) {
 
   // Pattern to be matched when parsing kirbytext() (everything between <code> and </code>)
@@ -15,11 +43,11 @@ kirbytext::$post[] = function($kirbytext, $value) {
 
     // Instantiating highlighter & passing array of languages
     $highlighter = new Highlighter();
-    $highlighter->setAutodetectLanguages(c::get('plugin.kirby-highlight.languages') ? c::get('plugin.kirby-highlight.languages') : array('html', 'php'));
+    $highlighter->setAutodetectLanguages(settings::languages());
 
     // Optionally escaping each match ..
-    $input = c::get('plugin.kirby-highlight.escaping') ? $match[0] : htmlspecialchars_decode($match[0]);
-    
+    $input = settings::escaping() ? $match[0] : htmlspecialchars_decode($match[0]);
+
     // .. but always highlighting & outputting it
     $highlightedMatch = $highlighter->highlightAuto($input);
     $highlightedMatch = $highlightedMatch->value;
@@ -29,4 +57,3 @@ kirbytext::$post[] = function($kirbytext, $value) {
   }, $value);
 
 };
-
