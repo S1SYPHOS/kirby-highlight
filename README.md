@@ -4,7 +4,7 @@
 This plugin highlights your code snippets server-side - without external dependencies.
 
 - Code highlighting for everyone - no javascript needed
-- Comprehensive: supports [141 languages](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages)
+- Comprehensive: supports [176 languages](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages)
 - Customisable: 79 different styles included
 
 ![screenshot of the kirby-highlight plugin](screenshot.gif)
