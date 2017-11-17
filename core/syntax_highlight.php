@@ -21,10 +21,8 @@ class Settings {
 
     // Set config names and fallbacks as settings
     $settings = [
-
-      // Languages to be auto-detected
-      'languages' => ['html', 'php'],
-      'escaping'  => false,
+      'languages' => ['html', 'php'], // Languages to be auto-detected
+      'escaping'  => false, // Enables / disables character escaping
     ];
 
     // If config settings exist, return the config with fallback
