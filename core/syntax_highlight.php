@@ -9,7 +9,7 @@ use c;
 class Settings {
 
   /**
-   * Returns the default options for `kirby-pep`
+   * Returns the default options for `kirby-highlight`
    *
    * @return array
    */
