@@ -1,20 +1,24 @@
 [
     {
         "name": "scrivo/highlight.php",
-        "version": "v9.0.0",
-        "version_normalized": "9.0.0.0",
+        "version": "v9.12.0.1",
+        "version_normalized": "9.12.0.1",
         "source": {
             "type": "git",
             "url": "https://github.com/scrivo/highlight.php.git",
-            "reference": "a905bf346a47f5fa40f33641b346c37f418d1242"
+            "reference": "a4930dde24bf6b9064fb52c22d71211144567e7f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/a905bf346a47f5fa40f33641b346c37f418d1242",
-            "reference": "a905bf346a47f5fa40f33641b346c37f418d1242",
+            "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/a4930dde24bf6b9064fb52c22d71211144567e7f",
+            "reference": "a4930dde24bf6b9064fb52c22d71211144567e7f",
             "shasum": ""
         },
-        "time": "2016-01-01T14:08:00+00:00",
+        "require-dev": {
+            "phpunit/phpunit": "^4.8",
+            "symfony/finder": "^2.8"
+        },
+        "time": "2017-12-24T23:01:41+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -26,7 +30,24 @@
         "license": [
             "BSD-3-Clause"
         ],
-        "description": "Server side syntax highlighter that supports over 90 languages. It's a PHP port of highlight.js",
+        "authors": [
+            {
+                "name": "Geert Bergman",
+                "homepage": "http://www.scrivo.org/",
+                "role": "Project Author"
+            },
+            {
+                "name": "Vladimir Jimenez",
+                "homepage": "https://allejo.io",
+                "role": "Contributor"
+            },
+            {
+                "name": "Martin Folkers",
+                "homepage": "https://twobrain.io",
+                "role": "Contributor"
+            }
+        ],
+        "description": "Server side syntax highlighter that supports 176 languages. It's a PHP port of highlight.js",
         "keywords": [
             "code",
             "highlight",

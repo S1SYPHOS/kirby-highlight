@@ -78,8 +78,12 @@ Alternatively you can use the autodetection mode. The thing to note here is that
 Run _composer require_ from your command line:
 
 ```bash
-composer require stakx/highlight.php
+composer require scrivo/highlight.php
 ```
+
+## Versioning
+
+This project will follow the same version numbers as the highlight.js project with regards to languages, meaning that a language definition available in highlight.js 9.12.0 will be available in highlight.php 9.12.0. However, there are times where bugs may arise in this project or its translated definition files, so there'll be one more number appended to the version number. For example, version 9.12.0.1 will contain all of the same languages as highlight.js 9.12.0 but also contain fixes solely to this project. This is done so this project can have version bumps without conflicts should highlight.js release version 9.12.1.
 
 ## Project structure
 
@@ -147,12 +151,11 @@ Note that the following tests for _highlight.js_ were not rewritten for _highlig
 
 ### special explicitLanguage
 
-Controlling language selection by setting an attribute to the containing DIV
-is irrelevant for _highlight.php_
+Controlling language selection by setting an attribute to the containing `<div>` is irrelevant for _highlight.php_
 
 ### special customMarkup
 
-In highlight.js, code may contain additional HTML markup like in the following PHP fragment: '$sum = <b>$a</b> + $b;'. Currently this is not supported by _highlight.php_. _highlight.php_ can only highlight (unescaped) code. Also HTML breaks <br> code to highlight is not supported. _highlight.php_ does support tab replacement (defaults to 4 spaces).
+In _highlight.js_, code may contain additional HTML markup like in the following PHP fragment: `$sum = <b>$a</b> + $b;`. Currently this is not supported by _highlight.php_ which can only highlight (unescaped) code. Also highlighting `<br>` (HTML break element) is not supported. _highlight.php_ does however support tab replacement (which defaults to 4 spaces).
 
 ### special noHighlight
 
@@ -185,3 +188,4 @@ I couldn't found any satisfactory PHP solution so I decided to port one from Jav
 It was my decision not to make a PHP highlighter but to do a port of highlight.js, these are different things. The goal was to make it work exactly as [highlight.js](http://www.highlightjs.org) to make as much use as possible of the language definitions and CSS files of the original program.
 
 Happy coding!
+
