@@ -46,30 +46,29 @@ Change `kirby-highlight` options to suit your needs:
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `plugin.kirby-highlight.languages` | Array | `['html', 'php']` | Defines languages to be auto-detected (currently [141 languages](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages) are supported). |
+| `plugin.kirby-highlight.languages` | Array | `['html', 'php']` | Defines languages to be auto-detected (currently 176 languages are supported). |
 | `plugin.kirby-highlight.escaping` | Boolean | `false` | Enables character escaping (converting `<` to `&lt;`, `>` to `&gt;`, ..), see `htmlspecialchars()` [docs](http://php.net/manual/en/function.htmlspecialchars.php). |
 
 ## Styling
-Since `kirby-highlight` outputs the same markup like `highlight.js`, all styles created for the latter are suitable as well. To apply one of the many available stylesheets, just include it in your `<head>` element using the `css()` helper:
+All `highlight.js` styles are fully compatible with `kirby-highlight`. Just include it using the `css()` [helper](https://getkirby.com/docs/cheatsheet/helpers/css):
 
 ```php
 <?php echo css('assets/plugins/kirby-highlight/css/zenburn.css') ?>
 ```
 
-**Note: Most of the included themes depend some way or another on the class `.hljs` to be added to the code's container!**
+**Note: For most themes to work, the class `.hljs` needs to be added to the code's container!**
 
-In order to make sure the theme gets applied as planned, any of these methods will work:
-- Simply use `kirby-pep` to [put it there](https://github.com/S1SYPHOS/kirby-pep): `c::set('plugin.kirby-pep.code_class', 'language-%s hljs');`
+To resolve this, any of the following will do:
+- Simply use the [Kirby PEP](https://github.com/S1SYPHOS/kirby-pep) plugin and add the following line to your `config.php`: `c::set('plugin.kirby-pep.code_class', 'language-%s hljs');`
 - Replace `.hljs` with `[class^="language-"]` in the included stylesheet
 - Copy it to your `assets/css` directory and modify it
-- Include the styles in your own workflow 
+- Include the styles in your own workflow
 
 ## Troubleshooting
-Adding an unsupported language breaks `kirbytext()` parsing of the code snippet in question. Always be sure to only include [valid languages](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages).
+If in doubt, check the [correct spelling](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages) of the language in question - doing otherwise breaks `kirbytext()` (see [#2](https://github.com/S1SYPHOS/kirby-highlight/issues/2)).
 
 ## Credits / License
 `kirby-highlight` is based on Geert Bergman's `highlight.php` library (a PHP port of [highlight.js](https://highlightjs.org)). It is licensed under the [MIT License](LICENSE), but **using Kirby in production** requires you to [buy a license](https://getkirby.com/buy). Are you ready for the [next step](https://getkirby.com/next)?
 
 ## Special Thanks
 I'd like to thank everybody that's making great software - you people are awesome. Also I'm always thankful for feedback and bug reports :)
-
