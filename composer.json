@@ -11,6 +11,7 @@
     }
   ],
   "require": {
+    "composer/installers": "~1.0",
     "scrivo/highlight.php": "9.*"
   }
 }

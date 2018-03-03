@@ -27,6 +27,12 @@ If you know your way around Git, you can download this plugin as a [submodule](h
 git submodule add https://github.com/S1SYPHOS/kirby-highlight.git site/plugins/kirby-highlight
 ```
 
+### Composer
+
+```text
+composer require S1SYPHOS/kirby-highlight:dev-composer
+```
+
 ### Clone or download
 
 1. [Clone](https://github.com/S1SYPHOS/kirby-highlight.git) or [download](https://github.com/S1SYPHOS/kirby-highlight/archive/master.zip)  this repository.
