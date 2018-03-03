@@ -1,4 +1,15 @@
 {
+  "name": "s1syphos/kirby-highlight",
+  "description": "Themeable server-side syntax highlighting for Kirby",
+  "type": "kirby-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Martin Folkers",
+      "homepage": "https://twobrain.io",
+      "role": "Project Author"
+    }
+  ],
   "require": {
     "scrivo/highlight.php": "9.*"
   }
