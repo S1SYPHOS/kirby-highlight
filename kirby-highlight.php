@@ -10,7 +10,7 @@
  * @license   MIT
  */
 
-if (c::get('plugin.kirby-highlight', true)) {
+if (c::get('plugin.kirby-highlight', false)) {
     // Initialising composer's autoloader
     require_once  __DIR__ . DS . 'vendor' . DS . 'autoload.php';
 
