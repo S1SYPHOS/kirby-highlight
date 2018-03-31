@@ -11,9 +11,6 @@
  */
 
 if (c::get('plugin.kirby-highlight', true)) {
-    // Initialising composer's autoloader
-    require_once  __DIR__ . DS . 'vendor' . DS . 'autoload.php';
-
     // Loading settings & core
     require_once __DIR__ . DS . 'core' . DS . 'syntax_highlight.php';
 }
