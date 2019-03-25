@@ -38,7 +38,7 @@ class SpecialTest extends PHPUnit_Framework_TestCase
             "code" => file_get_contents(__DIR__ . DIRECTORY_SEPARATOR .
                 "special" . DIRECTORY_SEPARATOR . "{$name}.txt"),
             "expected" => file_get_contents(__DIR__ . DIRECTORY_SEPARATOR .
-                "special" . DIRECTORY_SEPARATOR . "{$name}.expect.txt")
+                "special" . DIRECTORY_SEPARATOR . "{$name}.expect.txt"),
         );
     }
 
@@ -69,6 +69,16 @@ class SpecialTest extends PHPUnit_Framework_TestCase
 
         $data = $this->getTestData("sublanguages");
         $actual = $hl->highlight("xml", $data->code);
+
+        $this->assertEquals($data->expected, $actual->value);
+    }
+
+    public function testWindowsCRLF()
+    {
+        $hl = new Highlighter();
+
+        $data = $this->getTestData("line-endings.crlf");
+        $actual = $hl->highlight("js", $data->code);
 
         $this->assertEquals($data->expected, $actual->value);
     }

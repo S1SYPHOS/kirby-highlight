@@ -1,24 +1,28 @@
 [
     {
         "name": "scrivo/highlight.php",
-        "version": "v9.12.0.1",
-        "version_normalized": "9.12.0.1",
+        "version": "v9.15.6.0",
+        "version_normalized": "9.15.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/scrivo/highlight.php.git",
-            "reference": "a4930dde24bf6b9064fb52c22d71211144567e7f"
+            "reference": "5b5fc5eddb43845036f65e47f8d157ce5754511f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/a4930dde24bf6b9064fb52c22d71211144567e7f",
-            "reference": "a4930dde24bf6b9064fb52c22d71211144567e7f",
+            "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/5b5fc5eddb43845036f65e47f8d157ce5754511f",
+            "reference": "5b5fc5eddb43845036f65e47f8d157ce5754511f",
             "shasum": ""
         },
+        "require": {
+            "ext-json": "*",
+            "ext-mbstring": "*"
+        },
         "require-dev": {
-            "phpunit/phpunit": "^4.8",
+            "phpunit/phpunit": "^4.8|^5.7",
             "symfony/finder": "^2.8"
         },
-        "time": "2017-12-24T23:01:41+00:00",
+        "time": "2019-03-06T07:43:42+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -47,7 +51,7 @@
                 "role": "Contributor"
             }
         ],
-        "description": "Server side syntax highlighter that supports 176 languages. It's a PHP port of highlight.js",
+        "description": "Server side syntax highlighter that supports 185 languages. It's a PHP port of highlight.js",
         "keywords": [
             "code",
             "highlight",

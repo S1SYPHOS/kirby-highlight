@@ -1,0 +1,36 @@
+language: php
+php:
+  - nightly
+  - 7.3
+  - 7.2
+  - 7.1
+  - 7.0
+  - 5.6
+  - 5.5
+  - 5.4
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    # Since PHP 8.0.0-dev is the new nightly, some dependencies don't support
+    # it in their Composer files
+    - php: nightly
+
+install:
+  - composer install --no-interaction --no-progress
+
+script:
+  - composer test
+
+notifications:
+  email: false
+  webhooks:
+    - http://helit.org:8093/+sujevo-dev/showSuccessfulBuildMessages=always
+
+jobs:
+  include:
+    - stage: checks
+      php:
+        - 7.2
+      script:
+        bash .travis/hasGitChanges.sh

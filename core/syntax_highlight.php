@@ -7,6 +7,33 @@ use Highlight\Highlighter;
 use c;
 
 kirbytext::$post[] = function ($kirbytext, $value) {
+    /*
+     * I. Adding `hljs` class to all `pre` elements
+     */
+
+    // Converting kirbytext to an HTML document
+    // See https://secure.php.net/manual/en/class.domdocument.php
+    $html = new DOMDocument();
+    $html->loadHTML($text, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+    // Retrieving all `pre` elements inside our newly created HTML document
+    // See https://secure.php.net/manual/en/class.domxpath.php & https://en.wikipedia.org/wiki/XPath
+    $query = new DOMXPath($html);
+    $elements = $query->evaluate('//pre');
+
+    // Looping through all `pre` elements, adding the class name
+    foreach ($elements as $element) {
+        $element->setAttribute('class', c::get('plugin.kirby-highlight.class', 'hljs'));
+    }
+
+    // Saving all changes
+    $text = $html->saveHTML();
+
+
+    /*
+     * II. Highlighting everything between <code> and </code>
+     */
+
     // Pattern to be matched when parsing kirbytext() (everything between <code> and </code>)
     $pattern = '~<code[^>]*>\K.*(?=</code>)~Uis';
 

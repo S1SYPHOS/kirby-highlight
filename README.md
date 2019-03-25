@@ -43,7 +43,7 @@ Activate the plugin with the following line in your `config.php`:
 
 ```text
 c::set('plugin.kirby-highlight', true);
-``` 
+```
 
 Now proper classes are added to your code snippets, making  them 'themeable'. In order to do so, head over to the [styling](#styling) section. If you want to activate `kirby-highlight` only on specific domains, read about [multi-environment setups](https://getkirby.com/docs/developer-guide/configuration/options).
 
@@ -52,6 +52,7 @@ Change `kirby-highlight` options to suit your needs:
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
+| `plugin.kirby-highlight.class` | String | `'hljs'` | Sets class of surrounding `pre` container. |
 | `plugin.kirby-highlight.languages` | Array | `['html', 'php']` | Defines languages to be auto-detected (currently 176 languages are supported). |
 | `plugin.kirby-highlight.escaping` | Boolean | `false` | Enables character escaping (converting `<` to `&lt;`, `>` to `&gt;`, ..), see `htmlspecialchars()` [docs](http://php.net/manual/en/function.htmlspecialchars.php). |
 
@@ -62,13 +63,6 @@ All `highlight.js` styles are fully compatible with `kirby-highlight`. Just incl
 <?php echo css('assets/plugins/kirby-highlight/css/zenburn.css') ?>
 ```
 
-**Note: For most themes to work, the class `.hljs` needs to be added to the code's container!**
-
-To resolve this, any of the following will do:
-- Simply use the [Kirby PEP](https://github.com/S1SYPHOS/kirby-pep) plugin and add the following line to your `config.php`: `c::set('plugin.kirby-pep.code_class', 'language-%s hljs');`
-- Replace `.hljs` with `[class^="language-"]` in the included stylesheet
-- Copy it to your `assets/css` directory and modify it
-- Include the styles in your own workflow
 
 ## Troubleshooting
 If in doubt, check the [correct spelling](https://github.com/S1SYPHOS/kirby-highlight/tree/master/vendor/scrivo/highlight.php/Highlight/languages) of the language in question - doing otherwise breaks `kirbytext()` (see [#2](https://github.com/S1SYPHOS/kirby-highlight/issues/2)).

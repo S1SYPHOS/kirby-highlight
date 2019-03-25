@@ -6,7 +6,7 @@
  * @package   Kirby CMS
  * @author    S1SYPHOS <hello@twobrain.io>
  * @link      http://twobrain.io
- * @version   0.5.0
+ * @version   0.6.0
  * @license   MIT
  */
 
@@ -17,3 +17,4 @@ if (c::get('plugin.kirby-highlight', false)) {
     // Loading settings & core
     require_once __DIR__ . DS . 'core' . DS . 'syntax_highlight.php';
 }
+
