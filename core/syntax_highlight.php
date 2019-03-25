@@ -2,6 +2,9 @@
 
 namespace Kirby\Plugins\Highlight;
 
+use \DOMDocument;
+use \DOMXPath;
+
 use kirbytext;
 use Highlight\Highlighter;
 use c;
