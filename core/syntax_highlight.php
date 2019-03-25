@@ -17,7 +17,7 @@ kirbytext::$post[] = function ($kirbytext, $value) {
     // Converting kirbytext to an HTML document
     // See https://secure.php.net/manual/en/class.domdocument.php
     $html = new DOMDocument();
-    $html->loadHTML($text, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+    $html->loadHTML($value);
 
     // Retrieving all `pre` elements inside our newly created HTML document
     // See https://secure.php.net/manual/en/class.domxpath.php & https://en.wikipedia.org/wiki/XPath
@@ -30,7 +30,7 @@ kirbytext::$post[] = function ($kirbytext, $value) {
     }
 
     // Saving all changes
-    $text = $html->saveHTML();
+    $value = $html->saveHTML();
 
 
     /*
